@@ -1,0 +1,92 @@
+<CodeGenerationInfo>
+  <ToolchainSettings>
+    <option>
+      <name>PE_G_4PEx_ToolChain_Compiler_SearchUserPaths</name>
+      <values lines_count="4">
+        <Line>"${ProcessorExpertPath}/lib/Kinetis/pdd/inc"</Line>
+        <Line>"${ProcessorExpertPath}/lib/Kinetis/iofiles"</Line>
+        <Line>"${ProjDirPath}/Sources"</Line>
+        <Line>"${ProjDirPath}/Generated_Code"</Line>
+      </values>
+    </option>
+  </ToolchainSettings>
+  <GeneratedFilesList>
+    <GeneratedByPE>
+      <File Name="Static_Code/PDD/MCM_PDD.h" FileDate="2014-02-20, 13:18:46" FileAge="1392931126000" FileType="262144" />
+      <File Name="Static_Code/PDD/RTC_PDD.h" FileDate="2014-02-20, 13:18:46" FileAge="1392931126000" FileType="262144" />
+      <File Name="Sources/Events.h" FileDate="2014-06-11, 14:25:18" FileAge="1402521918796" FileType="131328" />
+      <File Name="Project_Settings/Debugger/MKL26Z128.mem" FileDate="2014-06-03, 09:31:20" FileAge="1401813080246" FileType="45637" CompNumb="2" />
+      <File Name="Sources/Events.c" FileDate="2014-06-11, 14:25:18" FileAge="1402521918796" FileType="131328" />
+      <File Name="Static_Code/PDD/UART_PDD.h" FileDate="2014-02-20, 13:18:46" FileAge="1392931126000" FileType="262144" />
+      <File Name="Generated_Code/Vectors.c" FileDate="2014-06-11, 14:25:18" FileAge="1402521918796" FileType="45637" CompNumb="2" />
+      <File Name="Documentation/doxygen/RoutingReport.txt" FileDate="2014-06-03, 09:31:20" FileAge="1401813080261" FileType="45637" CompNumb="2" />
+      <File Name="Documentation/doxygen/TRX_nIRQ.txt" FileDate="2014-06-09, 08:30:17" FileAge="1402327817265" FileType="45637" CompNumb="42" />
+      <File Name="Documentation/doxygen/RealTimeLdd1.txt" FileDate="2014-06-03, 11:48:52" FileAge="1401821332449" FileType="45637" CompNumb="27" />
+      <File Name="Generated_Code/TRX_SDO.h" FileDate="2014-06-11, 14:25:18" FileAge="1402521918839" FileType="45637" CompNumb="38" />
+      <File Name="Static_Code/PDD/USB_PDD.h" FileDate="2014-02-20, 13:18:46" FileAge="1392931126000" FileType="262144" />
+      <File Name="Generated_Code/TRX_SDO.c" FileDate="2014-06-11, 14:25:18" FileAge="1402521918839" FileType="45637" CompNumb="38" />
+      <File Name="Generated_Code/TRX_SDN.h" FileDate="2014-06-11, 14:25:18" FileAge="1402521918839" FileType="45637" CompNumb="33" />
+      <File Name="Documentation/TesetFRDM_Settings.xml" FileDate="2014-06-09, 08:30:17" FileAge="1402327817621" FileType="3072" />
+      <File Name="Generated_Code/PE_Const.h" FileDate="2014-06-11, 14:25:18" FileAge="1402521918825" FileType="45637" />
+      <File Name="Project_Settings/Linker_Files/ProcessorExpert.ld" FileDate="2014-06-03, 09:31:20" FileAge="1401813080246" FileType="8" CompNumb="2" />
+      <File Name="Generated_Code/TRX_SDN.c" FileDate="2014-06-11, 14:25:18" FileAge="1402521918839" FileType="45637" CompNumb="33" />
+      <File Name="Documentation/doxygen/TRX_nSEL.txt" FileDate="2014-06-03, 12:48:53" FileAge="1401824933121" FileType="45637" CompNumb="31" />
+      <File Name="Static_Code/PDD/UART0_PDD.h" FileDate="2014-02-20, 13:18:46" FileAge="1392931126000" FileType="262144" />
+      <File Name="Sources/main.c" FileDate="2014-06-11, 14:25:18" FileAge="1402521918810" FileType="128" />
+      <File Name="Static_Code/PDD/GPIO_PDD.h" FileDate="2014-02-20, 13:18:46" FileAge="1392931126000" FileType="262144" />
+      <File Name="Static_Code/PDD/TPM_PDD.h" FileDate="2014-02-20, 13:18:46" FileAge="1392931126000" FileType="262144" />
+      <File Name="Static_Code/PDD/COP_PDD.h" FileDate="2014-02-20, 13:18:46" FileAge="1392931126000" FileType="262144" />
+      <File Name="Generated_Code/TRX_SDI.h" FileDate="2014-06-11, 14:25:18" FileAge="1402521918854" FileType="45637" CompNumb="30" />
+      <File Name="Generated_Code/TRX_SDI.c" FileDate="2014-06-11, 14:25:18" FileAge="1402521918854" FileType="45637" CompNumb="30" />
+      <File Name="Generated_Code/PE_LDD.h" FileDate="2014-06-11, 14:25:18" FileAge="1402521918796" FileType="45637" CompNumb="2" />
+      <File Name="Documentation/doxygen/TU1.txt" FileDate="2014-06-03, 11:48:52" FileAge="1401821332480" FileType="45637" CompNumb="28" />
+      <File Name="Generated_Code/PE_LDD.c" FileDate="2014-06-11, 14:25:18" FileAge="1402521918796" FileType="45637" CompNumb="2" />
+      <File Name="Static_Code/PDD/CMP_PDD.h" FileDate="2014-02-20, 13:18:46" FileAge="1392931126000" FileType="262144" />
+      <File Name="Generated_Code/LED_red.h" FileDate="2014-06-11, 14:25:18" FileAge="1402521918883" FileType="45637" CompNumb="6" />
+      <File Name="Generated_Code/LED_red.c" FileDate="2014-06-11, 14:25:18" FileAge="1402521918883" FileType="45637" CompNumb="6" />
+      <File Name="Generated_Code/PE_Error.h" FileDate="2014-06-11, 14:25:18" FileAge="1402521918825" FileType="45637" />
+      <File Name="Static_Code/PDD/LPTMR_PDD.h" FileDate="2014-02-20, 13:18:46" FileAge="1392931126000" FileType="262144" />
+      <File Name="Generated_Code/FC161.h" FileDate="2014-06-11, 14:25:18" FileAge="1402521918868" FileType="45637" CompNumb="26" />
+      <File Name="Static_Code/PDD/SAI_PDD.h" FileDate="2014-02-20, 13:18:46" FileAge="1392931126000" FileType="262144" />
+      <File Name="Static_Code/PDD/DMA_PDD.h" FileDate="2014-02-20, 13:18:46" FileAge="1392931126000" FileType="262144" />
+      <File Name="Generated_Code/FC161.c" FileDate="2014-06-11, 14:25:18" FileAge="1402521918868" FileType="45637" CompNumb="26" />
+      <File Name="Generated_Code/TRX_nSEL.h" FileDate="2014-06-11, 14:25:18" FileAge="1402521918854" FileType="45637" CompNumb="31" />
+      <File Name="Static_Code/PDD/SPI_PDD.h" FileDate="2014-02-20, 13:18:46" FileAge="1392931126000" FileType="262144" />
+      <File Name="Static_Code/PDD/SIM_PDD.h" FileDate="2014-02-20, 13:18:46" FileAge="1392931126000" FileType="262144" />
+      <File Name="Generated_Code/TRX_SCLK.h" FileDate="2014-06-11, 14:25:18" FileAge="1402521918854" FileType="45637" CompNumb="32" />
+      <File Name="Documentation/doxygen/pex.css" FileDate="2014-06-03, 09:31:19" FileAge="1401813079793" FileType="16384" CompNumb="2" />
+      <File Name="Generated_Code/TRX_nSEL.c" FileDate="2014-06-11, 14:25:18" FileAge="1402521918854" FileType="45637" CompNumb="31" />
+      <File Name="Static_Code/PDD/ADC_PDD.h" FileDate="2014-02-20, 13:18:46" FileAge="1392931126000" FileType="262144" />
+      <File Name="Documentation/doxygen/pex.doxyfile" FileDate="2014-06-03, 09:31:20" FileAge="1401813080261" FileType="45637" CompNumb="2" />
+      <File Name="Generated_Code/IO_Map.h" FileDate="2014-06-11, 14:25:18" FileAge="1402521918810" FileType="45637" />
+      <File Name="Static_Code/PDD/DAC_PDD.h" FileDate="2014-02-20, 13:18:46" FileAge="1392931126000" FileType="262144" />
+      <File Name="Generated_Code/TRX_SCLK.c" FileDate="2014-06-11, 14:25:18" FileAge="1402521918839" FileType="45637" CompNumb="32" />
+      <File Name="Documentation/TesetFRDM_SIGNALS.txt" FileDate="2014-06-11, 14:25:18" FileAge="1402521918912" FileType="3072" />
+      <File Name="Generated_Code/TRX_nIRQ.h" FileDate="2014-06-11, 14:25:18" FileAge="1402521918825" FileType="45637" CompNumb="42" />
+      <File Name="Generated_Code/TRX_nIRQ.c" FileDate="2014-06-11, 14:25:18" FileAge="1402521918825" FileType="45637" CompNumb="42" />
+      <File Name="Generated_Code/Cpu.h" FileDate="2014-06-11, 14:25:18" FileAge="1402521918810" FileType="45637" CompNumb="2" />
+      <File Name="Generated_Code/Cpu.c" FileDate="2014-06-11, 14:25:18" FileAge="1402521918810" FileType="45637" CompNumb="2" />
+      <File Name="Documentation/doxygen/TRX_SDO.txt" FileDate="2014-06-03, 12:53:02" FileAge="1401825182527" FileType="45637" CompNumb="38" />
+      <File Name="Documentation/doxygen/TRX_SCLK.txt" FileDate="2014-06-03, 12:48:53" FileAge="1401824933121" FileType="45637" CompNumb="32" />
+      <File Name="Generated_Code/TU1.h" FileDate="2014-06-11, 14:25:18" FileAge="1402521918868" FileType="45637" CompNumb="28" />
+      <File Name="Documentation/doxygen/LED_red.txt" FileDate="2014-06-03, 10:10:48" FileAge="1401815448652" FileType="45637" CompNumb="6" />
+      <File Name="Static_Code/PDD/DMAMUX_PDD.h" FileDate="2014-02-20, 13:18:46" FileAge="1392931126000" FileType="262144" />
+      <File Name="Static_Code/PDD/FTFA_PDD.h" FileDate="2014-02-20, 13:18:46" FileAge="1392931126000" FileType="262144" />
+      <File Name="Generated_Code/TU1.c" FileDate="2014-06-11, 14:25:18" FileAge="1402521918868" FileType="45637" CompNumb="28" />
+      <File Name="Static_Code/IO_Map/MKL26Z4.h" FileDate="2014-02-20, 13:18:46" FileAge="1392931126000" FileType="262144" />
+      <File Name="Generated_Code/RealTimeLdd1.h" FileDate="2014-06-11, 14:25:18" FileAge="1402521918868" FileType="45637" CompNumb="27" />
+      <File Name="Static_Code/PDD/PIT_PDD.h" FileDate="2014-02-20, 13:18:46" FileAge="1392931126000" FileType="262144" />
+      <File Name="Documentation/doxygen/TRX_SDI.txt" FileDate="2014-06-03, 12:48:53" FileAge="1401824933121" FileType="45637" CompNumb="30" />
+      <File Name="Generated_Code/RealTimeLdd1.c" FileDate="2014-06-11, 14:25:18" FileAge="1402521918868" FileType="45637" CompNumb="27" />
+      <File Name="Documentation/TesetFRDM.txt" FileDate="2014-06-09, 08:30:17" FileAge="1402327817637" FileType="3072" />
+      <File Name="Documentation/doxygen/TRX_SDN.txt" FileDate="2014-06-03, 12:36:26" FileAge="1401824186871" FileType="45637" CompNumb="33" />
+      <File Name="Static_Code/PDD/PORT_PDD.h" FileDate="2014-02-20, 13:18:46" FileAge="1392931126000" FileType="262144" />
+      <File Name="Documentation/doxygen/TesetFRDM.txt" FileDate="2014-06-09, 08:30:17" FileAge="1402327817405" FileType="45637" CompNumb="2" />
+      <File Name="Static_Code/PDD/I2C_PDD.h" FileDate="2014-02-20, 13:18:46" FileAge="1392931126000" FileType="262144" />
+      <File Name="Static_Code/PDD/SysTick_PDD.h" FileDate="2014-02-20, 13:18:46" FileAge="1392931126000" FileType="262144" />
+      <File Name="Static_Code/PDD/PDD_Types.h" FileDate="2013-04-18, 00:55:42" FileAge="1366271742000" FileType="262144" />
+      <File Name="Generated_Code/PE_Types.h" FileDate="2014-06-11, 14:25:18" FileAge="1402521918825" FileType="45637" />
+    </GeneratedByPE>
+  </GeneratedFilesList>
+  <CodeGenReference>26</CodeGenReference>
+</CodeGenerationInfo>
