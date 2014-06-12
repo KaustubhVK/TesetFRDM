@@ -70,7 +70,7 @@ Hi_pfm_div: 1
 // Descriptions:
 //   GLOBAL_XO_TUNE - Configure the internal capacitor frequency tuning bank for the crystal oscillator.
 */
-#define RF_GLOBAL_XO_TUNE_1 0x11, 0x00, 0x01, 0x00, 0x52
+#define RF_GLOBAL_XO_TUNE_1 0x11, 0x00, 0x01, 0x00, 0x48
 
 /*
 // Set properties:           RF_GLOBAL_CONFIG_1
@@ -97,7 +97,7 @@ Packet Handler) in order to generate HW interrupts at the NIRQ pin.
 
 HW interrupt on the NIRQ output pin.
 */
-#define RF_INT_CTL_ENABLE_2  0x11, 0x01, 0x04, 0x00, 0x07, 0x20, 0x00, 0x00
+#define RF_INT_CTL_ENABLE_2  0x11, 0x01, 0x02, 0x00, 0x01, 0x18, 0x00
 
 
 

@@ -87,6 +87,22 @@ int trx_spi_sendcmdwithreply(uint32_t *cmd,uint32_t * rep,int cmd_len, int rep_l
 		return 1;
 		}
 
+void trx_read_buf(uint32_t *buf, int len)
+{
+int i=0;	
+trx_spi_transfer(0x77);
+for (i=0;i<len+1;i++)
+{
+	
+*buf=trx_spi_transfer(0xFF);
+buf++;
+}
+TRX_nSEL_SetVal((void *)0);
+
+
+
+
+}
 int trx_initialize()
 {
 		uint32_t r, ri;
@@ -124,79 +140,136 @@ int trx_initialize()
 	 // Enable the interrupts
 	 uint32_t it[]={RF_INT_CTL_ENABLE_2};
 	 trx_spi_sendcmdwithreply(it,&r,8,1);
-	 //Configuring the GPIO pins
-//	 uint32_t gpio[]={RF_GPIO_PIN_CFG};
-//		trx_spi_sendcmdwithreply(gpio,&r,8,1);
+	// Configuring the GPIO pins
+	 uint32_t gpio[]={RF_GPIO_PIN_CFG};
+		trx_spi_sendcmdwithreply(gpio,&r,8,1);
 
 	 // configuring the radio now
-	
+	uint32_t global[]={RF_GLOBAL_CONFIG_1};
+	trx_spi_sendcmdwithreply(global,&r,5,1);
+	//FRR conguration
+	uint32_t FRR[]={RF_FRR_CTL_A_MODE_4};
+	trx_spi_sendcmdwithreply(FRR,&r,8,1);
+
 			 	 
 		uint32_t da=0x33;
 		trx_spi_sendcmdwithreply(&da,&r,1,3);
 	 	 
-			 	
-		uint32_t ModemTrx3[]={RF_PREAMBLE_TX_LENGTH_1};
-		uint32_t ModemTrx4[]={RF_PREAMBLE_CONFIG_1};
-		uint32_t Mode[]={RF_MODEM_MOD_TYPE_12};
-		uint32_t CLKGEN[]={RF_MODEM_CLKGEN_BAND_1};
-		uint32_t synth[]={RF_SYNTH_PFDCP_CPFF_7};
-		uint32_t freq_int[]={RF_FREQ_CONTROL_INTE_8};
-		uint32_t ramp[]={RF_MODEM_TX_RAMP_DELAY_8};
-			 			 	 
-		trx_spi_sendcmdwithreply(Mode,&r, 16,1);
-		trx_spi_sendcmdwithreply(CLKGEN,&r,5,1);
-
-		trx_spi_sendcmdwithreply(synth,&r,11,1);
-
-		trx_spi_sendcmdwithreply(freq_int,&r,12,1);
-
-		trx_spi_sendcmdwithreply(ramp, &r,12,1);
 		
-//		uint32_t rxprop1[]={RF_MODEM_CHFLT_RX1_CHFLT_COE1_7_0_12};
-//		trx_sendcmdnoreply(rxprop1,16);
-//		
-//		
-//		
-//		uint32_t rxprop2[]={RF_MODEM_CHFLT_RX1_CHFLT_COE13_7_0_12};
-//		trx_sendcmdnoreply(rxprop2,16);
-//		
-//		uint32_t rxprop3[]={RF_MODEM_CHFLT_RX2_CHFLT_COE7_7_0_12};
-//		trx_sendcmdnoreply(rxprop3,16);
-//
-//		uint32_t rxprop4[]={RF_MODEM_BCR_OSR_1_9};
-//		trx_sendcmdnoreply(rxprop4,13);
-//		
-//		uint32_t rxprop5[]={RF_MODEM_AFC_GEAR_7};
-//		trx_sendcmdnoreply(rxprop5,13);
-
-
-
-
-
-		//set PA mode
+		
 			 			 	 
-		uint32_t PA[]={RF_PA_MODE_4};
-		trx_spi_sendcmdwithreply(PA, &r,8,1);
+	
 
+		
+		
+	
+		
+		
+		
+		
+		
+
+		
+		
+
+
+
+
+
+	
+			 			 	 
+		
 		
 		//configure the preamble length
+	 	
+		uint32_t ModemTrx3[]={RF_PREAMBLE_TX_LENGTH_1};
+		uint32_t ModemTrx4[]={RF_PREAMBLE_CONFIG_1};
+		
+		
 		trx_spi_sendcmdwithreply(ModemTrx3,&r,5,1);
 			 			 	 
 		//select the preamble config 
 		trx_spi_sendcmdwithreply(ModemTrx4,&r,5,1);
-			 			 	 
-			 			 	 
-
+		
 		//select the sync config
-			 			 	 	 
 		uint32_t sync[]={RF_SYNC_CONFIG_3};
 		trx_spi_sendcmdwithreply(sync,&r,7,1);
-			 			 	 
+		
+		
 		//select the packet configuration 
 		uint32_t packet[]={RF_PKT_CONFIG1_1};
-		uint32_t packetlength[]={RF_PKT_FIELD_1_CONFIG_1};
-		trx_spi_sendcmdwithreply(packetlength,&r,5,1);
-		trx_spi_sendcmdwithreply(packet,&r,5,1);
+				uint32_t packetlength[]={RF_PKT_FIELD_1_CONFIG_1};
+				trx_spi_sendcmdwithreply(packetlength,&r,5,1);
+				trx_spi_sendcmdwithreply(packet,&r,5,1);
+		//Modem mod type
+		uint32_t Mode[]={RF_MODEM_MOD_TYPE_12};
+		trx_spi_sendcmdwithreply(Mode,&r, 16,1);
+		
+		// Modem Freq
+		
+		uint32_t frq[]={RF_MODEM_FREQ_DEV_0_1};
+		trx_spi_sendcmdwithreply(frq,&r,5,1);
+		
+		//Ramp
+		uint32_t ramp[]={RF_MODEM_TX_RAMP_DELAY_8};
+		trx_spi_sendcmdwithreply(ramp, &r,12,1);
+		
+		
+		
+		//BCR
+		
+		uint32_t rxprop4[]={RF_MODEM_BCR_OSR_1_9};
+		trx_sendcmdnoreply(rxprop4,13);
+	
+		//AFC_Gear
+		uint32_t rxprop5[]={RF_MODEM_AFC_GEAR_7};
+		trx_sendcmdnoreply(rxprop5,13);
+		
+		//AFC_Gear
+		uint32_t rxprop6[]={RF_MODEM_AGC_CONTROL_1};
+		trx_sendcmdnoreply(rxprop6,5);
+		
+		//OOK  needs a second look
+		uint32_t OOK[]={RF_MODEM_OOK_CNT1_8};
+		trx_sendcmdnoreply(OOK,12);
+		
+		//RSSI
+		uint32_t RSSI[]={RF_MODEM_RSSI_COMP_1};
+		trx_sendcmdnoreply(RSSI,5);
+
+		
+		//CLKGEN
+		uint32_t CLKGEN[]={RF_MODEM_CLKGEN_BAND_1};
+		trx_spi_sendcmdwithreply(CLKGEN,&r,5,1);
+		
+		//COE13
+		uint32_t rxprop2[]={RF_MODEM_CHFLT_RX1_CHFLT_COE13_7_0_12};
+		trx_sendcmdnoreply(rxprop2,16);
+
+		//COE13_7_12
+		uint32_t rxprop1[]={RF_MODEM_CHFLT_RX1_CHFLT_COE1_7_0_12};
+		trx_sendcmdnoreply(rxprop1,16);
+			
+		//COE7_7_12
+		
+		uint32_t rxprop3[]={RF_MODEM_CHFLT_RX2_CHFLT_COE7_7_0_12};
+		trx_sendcmdnoreply(rxprop3,16);
+		//set PA mode	 			 	 
+		uint32_t PA[]={RF_PA_MODE_4};
+		trx_spi_sendcmdwithreply(PA, &r,8,1);
+				
+				
+
+		//select the synth config
+		uint32_t synth[]={RF_SYNTH_PFDCP_CPFF_7};	 			 	 	 
+		trx_spi_sendcmdwithreply(synth, &r,11,1);
+			 			 	 
+		
+		//RF_FREQ_INT
+		uint32_t rf_freq[]={RF_FREQ_CONTROL_INTE_8};
+		trx_spi_sendcmdwithreply(rf_freq, &r,12,1);
+
+		
 		// set internal capacitor frequency
 		uint32_t XO[]={RF_GLOBAL_XO_TUNE_1};
 		trx_spi_sendcmdwithreply(XO, &r,5,1);
@@ -205,7 +278,7 @@ int trx_initialize()
 		uint32_t write[]={0x34,0x01};
 		trx_spi_sendcmdwithreply(write,&r,2,1);
 		delay(2000);
-		trx_transmit();
+		trx_receive();
 return 1;}
 
 int trx_transmit()
@@ -218,16 +291,17 @@ int trx_transmit()
 		 	 // Building the payload
 		 	 uint32_t data[9];
 		 	 data[0]=0x66;
-		 	 data[1]=0x55;
-		 	 data[2]=0x54;
+		 	 data[1]=0x42;
+		 	 data[2]=0x55;
 		 	 data[3]=0x54;
 		 	 data[4]=0x54;
-		 	 data[5]=0x54;
-		 	 data[6]=0x54;
-		 	 data[7]=0x0D;
+		 	 data[5]=0x4F;
+		 	 data[6]=0x4E;
+		 	 data[7]=0x34;
+		 	 data[8]=0x0D;
 		 	 
 		 	
-		 	  trx_sendcmdnoreply (data,8);
+		 	  trx_sendcmdnoreply (data,9);
 
 		 	 //start TX
 		 	 
@@ -269,8 +343,8 @@ int trx_receive()
 	
 	uint32_t write[2],r;	 	 	
 		write[0]=0x34;
-			 	 	  write[1]=0x08;
-			 	 	 trx_spi_sendcmdwithreply(write,&r,2,1);
+	write[1]=0x08;
+	trx_spi_sendcmdwithreply(write,&r,2,1);
 	while(1)
 	{
 	uint32_t rx_buf[8];
@@ -278,16 +352,56 @@ int trx_receive()
 	rx_buf[1]=0;
 	rx_buf[2]=0x00;
 	rx_buf[3]=0x00;
-	rx_buf[4]=8;
+	rx_buf[4]=0x08;
 	rx_buf[5]=0x00;
 	rx_buf[6]=0x03;
 	rx_buf[7]=0x03;
 	trx_sendcmdnoreply(rx_buf,8);
+	uint32_t *data=(uint32_t *)malloc(sizeof(uint32_t));
 	while(TRX_nIRQ_GetVal((void *)0))
 	{
 		
 	}
-	LED_red_ClrVal((void *)0);
+					LED_red_ClrVal((void *)0);
+					delay(200000);
+					LED_red_SetVal((void *)0);
+					delay(200000);
+		//Read the data
+		//First get the interrupt cause
+	uint32_t it_cause=0x21;
+	
+		trx_spi_sendcmdwithreply(&it_cause,&r,1,1);
+			
+		if(r==0x10)
+		{
+			
+			
+			trx_read_buf(data,8);
+			if(data[0]=='B' && data[1]=='U' && data[2]=='T' && data[3] == 'T' && data[4]=='O' && data[5]=='N' && data[6]=='1')
+			{
+			while(1)
+			{
+				
+				LED_red_ClrVal((void *)0);
+									delay(20000);
+									LED_red_SetVal((void *)0);
+									delay(20000);
+				
+				
+			}
+			
+			
+			}
+			
+			
+		}
+		int i=0;
+		for(i=0;i<8;i++)
+					{
+					free(data);
+					data++;
+					}
+		
 	}
 return 1;
 
